@@ -1,12 +1,12 @@
 # Developer : Hamdy Abou El Anein
-
+response = input("What would you like to play to?")
 import random
 import pygame
 import sys
 from pygame import *
 from easygui import *
 
-image = "/usr/share/daylight/daylightstart/DayLightLogoSunSet.gif"
+image = "C:/Users/kevin/Documents/GitHub/Daylight-Pong-python3/screenshot.png"
 msg = "                           Welcome to Daylight Pong \n\n\n Rules of Daylight Pong \n\n\n Player 1 \n\n Arrow up = UP \n Arrow down = DOWN\n\n Player 2 \n\n Z = UP \n S = Down"
 choices = ["OK"]
 buttonbox(msg, image=image, choices=choices)
@@ -176,7 +176,7 @@ def keyup(event):
 init()
 
 
-while True:
+while (l_score or r_score) < int(response):
 
     draw(window)
 
@@ -193,3 +193,5 @@ while True:
 
     pygame.display.update()
     fps.tick(60)
+
+print("Thanks for playing!")
